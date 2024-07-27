@@ -20,4 +20,12 @@ export class CarsService {
       model: 'Cherokee'
     },
   ]
+
+  findAll() {
+    return this.cars
+  }
+
+  findOneById( id: number ) {
+    return this.cars.find( car => car.id === id)
+  }
 }
