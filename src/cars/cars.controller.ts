@@ -14,7 +14,7 @@ export class CarsController {
   }
 
   @Get(':id') //Entro a un segmento adicional
-  getCarById( @Param('id', ParseIntPipe ) id: number ) {
+  getCarById( @Param('id') id: string ) {
     return this.carsService.findOneById( id )
   }
 
