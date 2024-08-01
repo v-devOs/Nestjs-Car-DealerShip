@@ -1,4 +1,4 @@
-import { Body, Controller, Delete, Get, Param, ParseIntPipe, ParseUUIDPipe, Patch, Post, UsePipes, ValidationPipe } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, ParseIntPipe, ParseUUIDPipe, Patch, Post } from '@nestjs/common';
 import { CarsService } from './cars.service';
 import { CreateCarDto } from './dto/create-car.dto';
 
@@ -20,7 +20,6 @@ export class CarsController {
   }
 
   @Post()
-  
   createCar( @Body() createCarDto: CreateCarDto ) {
     return createCarDto
   }
@@ -40,6 +39,4 @@ export class CarsController {
       id
     }
   }
-  
-
 }
